@@ -7,6 +7,7 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import "../App.css";
+import { Link } from "react-router-dom";
 function Navbar() {
   return (
     <>
@@ -28,7 +29,9 @@ function Navbar() {
         <div className="content w-[45%] flex justify-between items-center">
           <div className="text  ">
             <span className="text-white font-medium">Homepage</span>
-            <span className=" ml-2 font-medium text-white">Timeline</span>
+            <Link to="/profile">
+              <span className=" ml-2 font-medium text-white">Profile</span>
+            </Link>
           </div>
           <div className="icons w-[20%] flex justify-around mx-4 ">
             <span className="before">
@@ -41,13 +44,15 @@ function Navbar() {
               <FontAwesomeIcon className="text-white" icon={faBell} />
             </span>
           </div>
-          <div className="photo w-8 ">
-            <img
-              src="https://img.freepik.com/free-vector/stylish-man-head-white-background_1308-114950.jpg"
-              alt=""
-              className=" rounded-3xl"
-            />
-          </div>
+          <Link to="/profile">
+            <div className="photo w-8  ">
+              <img
+                src="https://img.freepik.com/free-vector/stylish-man-head-white-background_1308-114950.jpg"
+                alt=""
+                className=" rounded-3xl"
+              />
+            </div>
+          </Link>
         </div>
       </div>
     </>
