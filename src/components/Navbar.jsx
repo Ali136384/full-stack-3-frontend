@@ -28,7 +28,9 @@ function Navbar() {
         </div>
         <div className="content w-[45%] flex justify-between items-center">
           <div className="text  ">
-            <span className="text-white font-medium">Homepage</span>
+            <Link to="/">
+              <span className="text-white font-medium">Homepage</span>
+            </Link>
             <Link to="/profile">
               <span className=" ml-2 font-medium text-white">Profile</span>
             </Link>
